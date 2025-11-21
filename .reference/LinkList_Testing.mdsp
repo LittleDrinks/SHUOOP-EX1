@@ -89,8 +89,8 @@ extraResourceOptions=
 [Resource]
 [Other]
 [History]
-main.cpp,202
-Josephus.cpp,575
-EraseMaxPre.cpp,1220
+LinkList.h,193
 Bisection.cpp,1011
-LinkList.h,106
+EraseMaxPre.cpp,1220
+Josephus.cpp,557
+main.cpp,323

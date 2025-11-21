@@ -1,6 +1,6 @@
 // LinkList.h							本文件描述单向链表类模板。移植时，仅需要本文件
-#ifndef LinkList_H
-#define LinkList_H
+#pragma once
+
 #include <iostream>
 #include <fstream>							// 因为文件操作
 using namespace std;
@@ -90,13 +90,13 @@ public:
 /*************************************************
  * 类模板成员函数操作描述（应该编写在头文件中）！*
  *************************************************/
-template <typename T> LinkList<T>::LinkList<T>()
+template <typename T> LinkList<T>::LinkList()
 {
 	num = 0;
 	head = cur_node = NULL;
 }
 
-template <typename T> LinkList<T>::LinkList<T>(const T*t,int n)
+template <typename T> LinkList<T>::LinkList(const T*t,int n)
 {
 	Node<T> *p;
 	head = NULL;
@@ -111,7 +111,7 @@ template <typename T> LinkList<T>::LinkList<T>(const T*t,int n)
 }
 
 template <typename T>
-LinkList<T>::LinkList<T>(const LinkList<T> &list)
+LinkList<T>::LinkList(const LinkList<T> &list)
 {
 	Node<T> *p, *pTail, *temp=list.head;
 	if((num=list.num)==0)
@@ -492,4 +492,3 @@ void LinkList<T>::Load(const char *filename,
 		Append(x);
 	infile.close();
 }
-#endif

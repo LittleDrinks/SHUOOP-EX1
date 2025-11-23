@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 
-// 测试添加客户
+// 3.1.1 测试添加客户
 TEST(ApplicationTest, AddCustomer) {
     Application& app = Application::getInstance();
     // 清空数据
@@ -23,7 +23,7 @@ TEST(ApplicationTest, AddCustomer) {
     EXPECT_EQ(app.getBankSystem().NumNodes(), 1);
 }
 
-// 测试添加账户
+// 3.1.1 测试添加账户
 TEST(ApplicationTest, AddAccount) {
     Application& app = Application::getInstance();
     app.getBankSystem().FreeList();
@@ -43,7 +43,7 @@ TEST(ApplicationTest, AddAccount) {
     EXPECT_EQ(app.getBankSystem().CurData().getAccountList().CurData().getPassword(), "pass123");
 }
 
-// 测试添加交易
+// 3.1.1 测试添加交易
 TEST(ApplicationTest, AddTransaction) {
     Application& app = Application::getInstance();
     app.getBankSystem().FreeList();
@@ -65,7 +65,7 @@ TEST(ApplicationTest, AddTransaction) {
     EXPECT_EQ(app.getBankSystem().CurData().getAccountList().CurData().getTransactionList().CurData().getAmount(), 100.0);
 }
 
-// 测试保存和加载数据
+// 3.1.1 测试保存和加载数据
 TEST(ApplicationTest, SaveAndLoadData) {
     Application& app = Application::getInstance();
     app.getBankSystem().FreeList();
@@ -256,7 +256,7 @@ TEST(ApplicationTest, EmptyListOperations) {
     // 不会崩溃
 }
 
-// 3.1.3 其他测试 - 边界测试：空字符串ID
+// 3.1.2 可靠性测试 ：空字符串ID
 TEST(ApplicationTest, EmptyStringID) {
     Application& app = Application::getInstance();
     app.getBankSystem().FreeList();
